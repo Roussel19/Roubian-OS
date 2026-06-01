@@ -1,0 +1,68 @@
+configuration {
+    modi: "drun";
+    font: "JetBrainsMono Nerd Font 12";
+    show-icons: true;
+    drun-display-format: "{name}";
+}
+
+* {
+    bg: #1e222a;
+    bg-alpha: #1e222aCC;
+    green: #98c379;
+    white: #ffffff;
+    transparent: rgba(0,0,0,0);
+    background-color: @transparent;
+    text-color: @white;
+}
+
+window {
+    width: 35%;
+    padding: 30px;
+    background-color: @bg-alpha;
+    border: 0px;
+    border-radius: 20px;
+    location: center;
+    fullscreen: false;
+}
+
+inputbar {
+    margin: 0px 0px 20px 0px;
+    padding: 10px;
+    background-color: #ffffff10;
+    border-radius: 10px;
+    children: [prompt, entry];
+}
+
+prompt {
+    enabled: true;
+    padding: 0px 10px 0px 0px;
+    text-color: @green;
+    content: " ";
+}
+
+entry {
+    placeholder: "Buscar aplicaciones...";
+    placeholder-color: #777777;
+}
+
+listview {
+    columns: 1;
+    lines: 5;
+    spacing: 10px;
+}
+
+element {
+    padding: 10px;
+    border-radius: 10px;
+    spacing: 15px;
+}
+
+element selected {
+    background-color: @green;
+    text-color: @bg;
+    border-radius: 10px;
+}
+
+element-icon {
+    size: 25px;
+}
